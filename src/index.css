@@ -14,17 +14,17 @@
     --foreground: 31 41 55; /* #1f2937 */
     
     /* Primary Colors - Soft Blue (#4A90E2) */
-    --primary: 74 144 226; /* #4A90E2 */
+    --primary: 74 144 226; /* #4A90E2 - RGB values */
     --primary-foreground: 255 255 255;
     --primary-light: 235 244 255; /* lighter version */
     
     /* Secondary Colors - Soft Green (#7ED321) */
-    --secondary: 126 211 33; /* #7ED321 */
+    --secondary: 126 211 33; /* #7ED321 - RGB values */
     --secondary-foreground: 255 255 255;
     --secondary-light: 240 253 244; /* lighter version */
     
     /* Accent Colors - Beige (#F5F5DC) */
-    --accent: 245 245 220; /* #F5F5DC */
+    --accent: 245 245 220; /* #F5F5DC - RGB values */
     --accent-foreground: 31 41 55;
     
     /* Neutral Colors */
@@ -136,56 +136,124 @@
 @layer components {
   /* Button Styles - 48px height, 8px radius */
   .btn-primary {
-    @apply h-12 px-6 bg-primary text-primary-foreground font-medium rounded-lg 
-           hover:bg-primary/90 active:bg-primary/80 
-           focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2
+    @apply h-12 px-6 font-medium rounded-lg 
+           hover:opacity-90 active:opacity-80 
+           focus:outline-none focus:ring-2 focus:ring-offset-2
            disabled:opacity-50 disabled:pointer-events-none
-           transition-colors duration-200;
+           transition-all duration-200;
+    background-color: rgb(74, 144, 226); /* #4A90E2 */
+    color: white;
+    border: none;
   }
   
   .btn-secondary {
-    @apply h-12 px-6 bg-secondary text-secondary-foreground font-medium rounded-lg 
-           hover:bg-secondary/90 active:bg-secondary/80 
-           focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2
+    @apply h-12 px-6 font-medium rounded-lg 
+           hover:opacity-90 active:opacity-80 
+           focus:outline-none focus:ring-2 focus:ring-offset-2
            disabled:opacity-50 disabled:pointer-events-none
-           transition-colors duration-200;
+           transition-all duration-200;
+    background-color: rgb(126, 211, 33); /* #7ED321 */
+    color: white;
+    border: none;
   }
   
   .btn-outline {
-    @apply h-12 px-6 border-2 border-border text-foreground font-medium rounded-lg 
-           hover:bg-muted active:bg-muted/80 
-           focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2
+    @apply h-12 px-6 border-2 font-medium rounded-lg 
+           hover:bg-opacity-10 active:bg-opacity-20 
+           focus:outline-none focus:ring-2 focus:ring-offset-2
            disabled:opacity-50 disabled:pointer-events-none
-           transition-colors duration-200;
+           transition-all duration-200;
+    border-color: rgb(74, 144, 226); /* #4A90E2 */
+    color: rgb(74, 144, 226);
+    background-color: transparent;
+  }
+  
+  .btn-outline:hover {
+    background-color: rgba(74, 144, 226, 0.1);
   }
   
   /* Input Styles - 48px height */
   .input-field {
-    @apply h-12 px-4 bg-background border border-input rounded-lg
+    @apply h-12 px-4 rounded-lg
            placeholder:text-muted-foreground
-           focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2
+           focus:outline-none focus:ring-2 focus:ring-offset-2
            disabled:opacity-50 disabled:cursor-not-allowed
-           transition-colors duration-200;
+           transition-all duration-200;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(229, 231, 235);
+    color: rgb(31, 41, 55);
+  }
+  
+  .input-field:focus {
+    border-color: rgb(74, 144, 226);
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
   }
   
   /* Card Styles - 12px radius, 16px padding */
   .card-base {
-    @apply bg-card text-card-foreground rounded-xl p-4 border border-border
-           shadow-sm;
+    @apply rounded-xl p-4 shadow-sm;
+    background-color: rgb(255, 255, 255);
+    color: rgb(31, 41, 55);
+    border: 1px solid rgb(229, 231, 235);
   }
   
   /* Chip Styles */
   .chip {
     @apply inline-flex items-center px-3 py-1 rounded-full text-caption font-medium
-           bg-muted text-muted-foreground
            transition-colors duration-200;
+    background-color: rgb(243, 244, 246);
+    color: rgb(107, 114, 128);
   }
   
   .chip-primary {
-    @apply bg-primary/10 text-primary;
+    background-color: rgba(74, 144, 226, 0.1);
+    color: rgb(74, 144, 226);
   }
   
   .chip-secondary {
-    @apply bg-secondary/10 text-secondary;
+    background-color: rgba(126, 211, 33, 0.1);
+    color: rgb(126, 211, 33);
   }
+}
+
+/* Dark mode overrides */
+.dark .btn-outline {
+  border-color: rgb(96, 165, 250);
+  color: rgb(96, 165, 250);
+}
+
+.dark .btn-outline:hover {
+  background-color: rgba(96, 165, 250, 0.1);
+}
+
+.dark .input-field {
+  background-color: rgb(31, 41, 55);
+  border-color: rgb(75, 85, 99);
+  color: rgb(249, 250, 251);
+}
+
+.dark .input-field:focus {
+  border-color: rgb(96, 165, 250);
+  box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+}
+
+.dark .card-base {
+  background-color: rgb(31, 41, 55);
+  color: rgb(249, 250, 251);
+  border-color: rgb(75, 85, 99);
+}
+
+.dark .chip {
+  background-color: rgb(55, 65, 81);
+  color: rgb(156, 163, 175);
+}
+
+.dark .chip-primary {
+  background-color: rgba(96, 165, 250, 0.1);
+  color: rgb(96, 165, 250);
+}
+
+.dark .chip-secondary {
+  background-color: rgba(74, 222, 128, 0.1);
+  color: rgb(74, 222, 128);
 }
