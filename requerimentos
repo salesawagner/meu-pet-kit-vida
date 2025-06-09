@@ -1,0 +1,149 @@
+# Projeto de Aplicativo Mobile para Cuidados com Pets: Análise Competitiva e Definições
+
+O presente projeto visa desenvolver um aplicativo móvel abrangente para cuidados com animais de estimação, baseado na análise detalhada dos principais concorrentes do mercado brasileiro. Através do estudo dos aplicativos MeuPet e PetZillas, foi possível identificar oportunidades de melhoria e definir uma proposta de valor diferenciada que combine as melhores práticas do setor com inovações tecnológicas. O projeto proposto integrará funcionalidades essenciais de gestão de saúde, agendamentos, monitoramento e rede social pet-friendly, oferecendo uma experiência completa e intuitiva para tutores de pets.
+
+## Análise da Concorrência
+
+### MeuPet: Foco em Gestão Médica
+
+O aplicativo MeuPet demonstra uma abordagem centrada no controle médico e de saúde dos pets[1]. Suas principais funcionalidades incluem lembretes automáticos para medicamentos, cronogramas detalhados de vacinas e controle parasitário, além do gerenciamento completo do histórico médico dos animais[1]. O app oferece recursos avançados para acompanhamento de sintomas através de fotos e anotações, armazenamento de resultados de exames laboratoriais e radiografias, e manutenção de indicadores vitais como peso e temperatura[1].
+
+Uma característica notável do MeuPet é sua capacidade de integração com profissionais veterinários, permitindo que o histórico médico esteja sempre disponível durante consultas[1]. No entanto, análises de usuários indicam problemas técnicos relacionados à inserção de dados fracionários em doses de medicamentos e pesagens, bem como dificuldades na configuração de medicamentos em dias alternados[1]. Estas limitações apresentam oportunidades claras de melhoria na experiência do usuário.
+
+### PetZillas: Abordagem Multifuncional
+
+O PetZillas adota uma estratégia mais abrangente, combinando funcionalidades de gestão veterinária com recursos de descoberta de locais pet-friendly[2]. O aplicativo oferece controle completo do histórico veterinário, sistema de lembretes para medicamentos e vacinas, além de um diretório extenso de estabelecimentos que recebem pets, incluindo hotéis, bares, restaurantes e parques[2]. 
+
+Uma vantagem competitiva do PetZillas é seu foco em profissionais do setor, oferecendo ferramentas específicas para veterinários, cuidadores e proprietários de clínicas para gerenciar informações de clientes e manter históricos atualizados[2]. As avaliações positivas dos usuários destacam a praticidade dos lembretes e o acompanhamento eficiente de medicamentos e vacinas, evidenciando a efetividade da interface desenvolvida[2].
+
+### Tendências de Mercado
+
+Análises do setor indicam que aplicativos de cuidados com pets devem incorporar funcionalidades como perfis detalhados de animais, teleconsultas veterinárias, rastreamento de atividades e integração com wearables[3][12]. Recursos emergentes incluem inteligência artificial para análise de sintomas, redes sociais para tutores, e-commerce integrado para produtos pet, e sistemas de GPS para localização de animais perdidos[12][18].
+
+## Definição do Projeto
+
+### Visão Geral
+
+O projeto proposto visa criar um aplicativo móvel nativo que combine as melhores práticas identificadas na análise competitiva, oferecendo uma plataforma unificada para gestão completa de cuidados com pets. O aplicativo será desenvolvido seguindo os princípios de design centrado no usuário, priorizando simplicidade, eficiência e confiabilidade.
+
+### Proposta de Valor
+
+O diferencial competitivo será baseado em três pilares fundamentais: experiência do usuário aprimorada com interface intuitiva e responsiva, integração avançada com tecnologias emergentes como AI para análise de sintomas e IoT para dispositivos wearables, e ecossistema completo que conecta tutores, veterinários e estabelecimentos pet-friendly em uma única plataforma.
+
+### Público-Alvo
+
+O aplicativo será direcionado principalmente para tutores de pets urbanos, com idade entre 25 e 45 anos, que utilizam smartphones regularmente e valorizam tecnologia para facilitar o cuidado com seus animais. Secundariamente, visa atender profissionais veterinários e estabelecimentos que oferecem serviços pet, criando uma rede integrada de cuidados.
+
+## Arquitetura de Telas
+
+### Estrutura de Navegação
+
+A arquitetura de navegação seguirá o padrão de abas inferior (bottom navigation), facilitando o acesso rápido às principais seções do aplicativo. As cinco abas principais serão: Home (dashboard personalizado), Pets (gestão de perfis), Saúde (histórico médico e lembretes), Descobrir (locais e serviços), e Perfil (configurações do usuário).
+
+### Telas Principais
+
+**Tela de Onboarding e Autenticação**: Sequência de três telas introdutórias explicando os benefícios do app, seguidas por opções de login via email, redes sociais ou número de telefone. Inclui processo de criação de conta com verificação por SMS e configuração inicial de preferências.
+
+**Dashboard Principal**: Interface centralizada exibindo cartões informativos com resumo de pets cadastrados, próximos lembretes de medicamentos e consultas, alertas de saúde importantes, e acesso rápido às funcionalidades mais utilizadas. Design responsivo com elementos visuais atraentes e informações hierarquizadas por prioridade.
+
+**Gestão de Perfis de Pets**: Tela principal listando todos os pets cadastrados com fotos, nomes e status de saúde. Tela de detalhes individual contendo informações completas como dados básicos (nome, espécie, raça, idade), histórico médico completo, cronograma de vacinas e medicamentos, e galeria de fotos com timeline.
+
+**Centro de Saúde**: Interface dedicada ao monitoramento médico com calendário visual de vacinas e medicamentos, histórico de consultas com anexos de exames, gráficos de evolução de peso e outros indicadores vitais, e funcionalidade de análise de sintomas com IA.
+
+### Telas Secundárias
+
+**Agendamentos**: Sistema integrado para marcação de consultas veterinárias, sessões de grooming e outros serviços. Inclui calendário interativo, lista de profissionais disponíveis com avaliações, confirmação de agendamentos via notificação push.
+
+**Localizador de Serviços**: Mapa interativo mostrando clínicas veterinárias, pet shops, parques e estabelecimentos pet-friendly próximos. Filtros por tipo de serviço, avaliações e distância, com detalhes completos de cada estabelecimento incluindo fotos, horários de funcionamento e contatos.
+
+**Rede Social**: Feed de atividades da comunidade pet, possibilidade de compartilhar fotos e experiências, grupos temáticos por raça ou localização, e sistema de mensagens entre tutores.
+
+## Fluxo do Usuário
+
+### Jornada de Onboarding
+
+O usuário inicia pela tela de splash screen com animação da marca, seguindo para as telas de apresentação que destacam os principais benefícios[13]. Após escolher a forma de autenticação, procede com a verificação de identidade e configuração inicial de preferências de notificações. O primeiro uso inclui um tutorial interativo guiando pela criação do primeiro perfil de pet e configuração de lembretes básicos.
+
+### Fluxo Principal de Uso
+
+A jornada típica diária inicia no dashboard, onde o usuário visualiza lembretes pendentes e atualizações importantes. Para adicionar informações de saúde, navega até a seção específica do pet, seleciona o tipo de registro (medicamento, peso, sintoma) e insere os dados através de formulários otimizados. Para agendamentos, acessa a seção correspondente, seleciona o tipo de serviço, escolhe data e horário disponível, e confirma a marcação.
+
+### Fluxos Especiais
+
+**Situações de Emergência**: Botão de acesso rápido no dashboard conecta diretamente com veterinários de plantão ou clínicas de emergência mais próximas[12]. Inclui funcionalidade de compartilhamento rápido do histórico médico do pet.
+
+**Análise de Sintomas com IA**: Fluxo guiado onde o usuário descreve sintomas observados, anexa fotos se necessário, e recebe recomendações preliminares baseadas no histórico do pet e base de conhecimento veterinário[18]. Sempre inclui recomendação de consulta presencial quando apropriado.
+
+## Funcionalidades Principais
+
+### Gestão de Saúde Avançada
+
+O módulo de saúde incorporará recursos de tracking de peso com gráficos de evolução temporal, lembretes inteligentes para medicamentos com dosagens personalizáveis (incluindo frações), cronograma automatizado de vacinas baseado na idade e espécie do pet, e registro fotográfico de sintomas com análise por inteligência artificial[1][12]. 
+
+Sistema de alertas proativos notificará sobre consultas de rotina, renovação de vacinas vencidas, e possíveis interações medicamentosas. Integração com dispositivos wearables permitirá monitoramento contínuo de atividade física, batimentos cardíacos e padrões de sono quando disponível.
+
+### Plataforma de Serviços Integrada
+
+O aplicativo oferecerá marketplace integrado conectando tutores com profissionais verificados da região[2]. Funcionalidades incluem agendamento online com confirmação automática, sistema de avaliações e comentários bidirecionais, integração com calendários externos, e lembretes automáticos de consultas agendadas.
+
+Teleconsultas veterinárias estarão disponíveis para situações não-emergenciais, com compartilhamento de tela para exibição de exames e histórico médico em tempo real[21]. Parcerias com redes de clínicas permitirão desconto progressivo baseado na frequência de uso da plataforma.
+
+### Recursos Sociais e Comunitários
+
+Desenvolvimento de comunidade ativa através de feed personalizado com conteúdo relevante sobre cuidados com pets, grupos temáticos organizados por raça, idade ou condições específicas de saúde, e sistema de mentoria conectando tutores experientes com iniciantes[12].
+
+Funcionalidade de "pets perdidos" utilizará geolocalização e rede de usuários para agilizar buscas, com alertas automáticos para usuários próximos à última localização conhecida. Integração com redes sociais externas facilitará compartilhamento de informações importantes.
+
+## Tecnologias e Integrações
+
+### Arquitetura Técnica
+
+O desenvolvimento seguirá arquitetura nativa para iOS e Android, garantindo performance otimizada e acesso completo às funcionalidades específicas de cada plataforma[4][13]. Backend baseado em microserviços escaláveis hospedados em cloud, com APIs RESTful para comunicação eficiente entre cliente e servidor.
+
+Banco de dados híbrido combinará SQL para dados estruturados (perfis, agendamentos) e NoSQL para conteúdo multimedia (fotos, vídeos) e logs de atividades. Implementação de caching local garantirá funcionamento offline para funcionalidades essenciais como visualização de dados de pets e lembretes.
+
+### Integrações Estratégicas
+
+Integração com APIs de mapas para localização de serviços e tracking de atividades, sistemas de pagamento seguros para transações dentro do app, e plataformas de telecomunicação para videochamadas de qualidade profissional[12]. 
+
+Conectividade com dispositivos IoT populares no mercado pet, incluindo coleiras inteligentes, comedouros automáticos e câmeras de monitoramento. Parcerias com laboratórios veterinários permitirão importação automática de resultados de exames diretamente para o histórico do pet.
+
+## Conclusão
+
+O projeto proposto representa uma evolução significativa no mercado de aplicativos para cuidados com pets, combinando as melhores práticas identificadas na análise competitiva com inovações tecnológicas emergentes. A estratégia de desenvolvimento focará na criação de uma experiência unificada que simplifique a gestão de cuidados com pets enquanto fortalece a conexão entre tutores, profissionais e comunidade pet.
+
+O diferencial competitivo será alcançado através da integração harmoniosa entre funcionalidades essenciais comprovadas pelo mercado e recursos inovadores baseados em inteligência artificial e Internet das Coisas. O sucesso do projeto dependerá da execução cuidadosa da experiência do usuário, estabelecimento de parcerias estratégicas com profissionais do setor, e implementação de um modelo de monetização sustentável que beneficie todos os stakeholders do ecossistema pet.
+
+A proposta técnica garante escalabilidade para crescimento futuro, enquanto a abordagem centrada no usuário assegura adoção orgânica e retenção de longo prazo. O roadmap de desenvolvimento priorizará o lançamento de um MVP com funcionalidades core, seguido por iterações baseadas em feedback dos usuários e evolução das necessidades do mercado.
+
+Fontes
+[1] id1342342113 https://apps.apple.com/br/app/meupet-cuidado-animal/id1342342113
+[2] id1347981298 https://apps.apple.com/br/app/petzillas/id1347981298
+[3] Features to Include in a Pets Care App - The One Technologies https://theonetechnologies.com/blog/post/top-15-features-to-include-in-a-pets-care-app
+[4] Pet Care Mobile App UI Kit - Figma https://www.figma.com/community/file/1401087389299509903/pet-care-mobile-app-ui-kit
+[5] Pet Care App: Build Your Pet Health Tracker Today - iCore Singapore https://icore.sg/blog/pet-health-tracker-app-development/
+[6] Case Study: Woofgang Pet Care App - Dribbble https://dribbble.com/shots/18123366-Case-Study-Woofgang-Pet-Care-App
+[7] Pet Care App Design - Dribbble https://dribbble.com/tags/pet-care-app-design
+[8] Pets Mobile App - Free Figma Templates https://www.freefigmatemplates.com/gallery/pets-mobile-app
+[9] Pet Care Mobile App - Dribbble https://dribbble.com/tags/pet-care-mobile-app
+[10] Controle Financeiro - PetFlow https://petflow.app/recursos/controle-financeiro/
+[11] Pet Widget Virtual Pets Screen – Apps no Google Play https://play.google.com/store/apps/details?id=com.pawpals.pet.widget.virtual.pets
+[12] Build a Pet Care App: Key Features, Types, and Cost Guide! https://www.apptunix.com/blog/build-a-pet-care-app-key-features-types-and-cost-guide/
+[13] 20+ UI Screens Designs for Pet-Caring Applications - Figma https://www.figma.com/community/file/1360166837210685517/pawsome-companion-20-ui-screens-designs-for-pet-caring-applications
+[14] Petcare App - Dribbble https://dribbble.com/tags/petcare-app
+[15] Pet Food and Accessories App UI | Pet Shop App | Figma - Behance https://www.behance.net/gallery/210788453/Pet-Food-and-Accessories-App-UI-Pet-Shop-App-Figma
+[16] PETCARE - Veterinary Medical Care Mobile App UI Kit https://ui8.net/addbrain-ui/products/petcare---veterinary-medical-care-app-ui-kit
+[17] Tutores - Meu Pet https://www.meupet.io/meu-pet-tutores
+[18] Pet care | Gemini API Developer Competition https://ai.google.dev/competition/projects/pet-care
+[19] Pet Apps Design - Pinterest https://www.pinterest.com/ideas/pet-apps-design/952644312684/
+[20] Storypet https://www.storypet.app
+[21] Pet Care App Development Cost and Key Features [2025] https://www.octalsoftware.com/blog/pet-care-app-development
+[22] Pet Monitor App Projects - Behance https://www.behance.net/search/projects/pet%20monitor%20app
+[23] How to Build a Pet Care App - Cprime https://www.cprime.com/resources/blog/how-to-build-a-pet-care-app/
+[24] Pet App Features to Keep Your Furry Friends Happy and Healthy https://www.digittrix.com/blogs/pet-app-features-keeping-your-furry-friends-happy-and-healthy
+[25] Materiais Gratuitos de Gestão para o Mercado Pet - PetFlow https://www.petflow.app/materiais/
+[26] Como criar um fluxo de caixa para seu Centro de Estética Pet? https://4pet.app/blog/como-criar-um-fluxo-de-caixa-para-seu-centro-de-estetica-pet/
+[27] SISTEMA GRATUITO PARA PET SHOP (@sistemapetflow) - Instagram https://www.instagram.com/sistemapetflow/
+[28] Flockr - App Pet - Saúde e bem estar para cachorros, gatos e todos ... https://flockr.social
+[29] Fluxo de caixa para pet shop: como fazer com o SimplesVet https://simples.vet/blog/gestao/fluxo-de-caixa-ed-simplesvet-resolve/
+[30] Tela para pet abertura 3 x 4 mm - TEGAPE https://tegape.com.br/produto/tela-para-pet-com-abertura-3x4-mm/
