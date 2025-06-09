@@ -197,21 +197,21 @@ const ComponentShowcase = () => {
           <h4 className="text-body font-medium">Bottom Navigation</h4>
           
           <div className="max-w-sm mx-auto">
-            <div className="bg-card border border-border rounded-t-xl p-4">
+            <div className="border-2 border-border rounded-xl p-4 bg-transparent">
               <div className="flex justify-around">
-                <button className="flex flex-col items-center gap-1 p-2">
+                <button className="flex flex-col items-center gap-1 p-2 border-2 border-primary rounded-lg bg-transparent">
                   <span className="text-xl">🏠</span>
                   <span className="text-caption text-primary font-medium">Início</span>
                 </button>
-                <button className="flex flex-col items-center gap-1 p-2">
+                <button className="flex flex-col items-center gap-1 p-2 border-2 border-transparent rounded-lg hover:border-border transition-colors">
                   <span className="text-xl">📅</span>
                   <span className="text-caption text-muted-foreground">Agenda</span>
                 </button>
-                <button className="flex flex-col items-center gap-1 p-2">
+                <button className="flex flex-col items-center gap-1 p-2 border-2 border-transparent rounded-lg hover:border-border transition-colors">
                   <span className="text-xl">🐕</span>
                   <span className="text-caption text-muted-foreground">Pets</span>
                 </button>
-                <button className="flex flex-col items-center gap-1 p-2">
+                <button className="flex flex-col items-center gap-1 p-2 border-2 border-transparent rounded-lg hover:border-border transition-colors">
                   <span className="text-xl">⚙️</span>
                   <span className="text-caption text-muted-foreground">Config</span>
                 </button>
