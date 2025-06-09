@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import { Home, Calendar, Dog, Settings } from 'lucide-react';
 
 const ComponentShowcase = () => {
   const [activeTab, setActiveTab] = useState('perfil');
@@ -200,19 +201,19 @@ const ComponentShowcase = () => {
             <div className="border-2 border-border rounded-xl p-4 bg-transparent">
               <div className="flex justify-around">
                 <button className="flex flex-col items-center gap-1 p-2 border-2 border-primary rounded-lg bg-transparent">
-                  <span className="text-xl">🏠</span>
+                  <Home className="w-5 h-5 text-primary" />
                   <span className="text-caption text-primary font-medium">Início</span>
                 </button>
                 <button className="flex flex-col items-center gap-1 p-2 border-2 border-transparent rounded-lg hover:border-border transition-colors">
-                  <span className="text-xl">📅</span>
+                  <Calendar className="w-5 h-5 text-muted-foreground" />
                   <span className="text-caption text-muted-foreground">Agenda</span>
                 </button>
                 <button className="flex flex-col items-center gap-1 p-2 border-2 border-transparent rounded-lg hover:border-border transition-colors">
-                  <span className="text-xl">🐕</span>
+                  <Dog className="w-5 h-5 text-muted-foreground" />
                   <span className="text-caption text-muted-foreground">Pets</span>
                 </button>
                 <button className="flex flex-col items-center gap-1 p-2 border-2 border-transparent rounded-lg hover:border-border transition-colors">
-                  <span className="text-xl">⚙️</span>
+                  <Settings className="w-5 h-5 text-muted-foreground" />
                   <span className="text-caption text-muted-foreground">Config</span>
                 </button>
               </div>
